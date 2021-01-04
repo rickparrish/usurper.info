@@ -1,0 +1,55 @@
+<h2>Installing</h2>
+<h4>DOS Version</h4>
+<p>Should be the same as you've always done it. Use the contact form if you need help</p>
+<h4>Win32 Version</h4>
+<p>Should be the same as you've done it for DOS. The only difference is to use DOOR32.SYS (note that's DOOR32.SYS not DOOR.SYS) since that's all the Win32 version can use</p>
+<h4>Linux Version (v0.24 and earlier)</h4>
+<p>v0.24 and earlier did not support socket I/O, so required STDIO redirection. Here's the settings I used in Synchronet, which calls STDIO redirection "Intercept I/O":</p>
+<pre>+[·][?]----------------------------------------------------+
+¦                          Usurper                         ¦
++----------------------------------------------------------¦
+¦ ¦Name                       Usurper                      ¦
+¦ ¦Internal Code              USURPER                      ¦
+¦ ¦Start-up Directory         ../xtrn/usurper              ¦
+¦ ¦Command Line               USURPER /N%1 /P%n            ¦
+¦ ¦Clean-up Command Line                                   ¦
+¦ ¦Execution Cost             None                         ¦
+¦ ¦Access Requirements                                     ¦
+¦ ¦Execution Requirements                                  ¦
+¦ ¦Multiple Concurrent Users  Yes                          ¦
+¦ ¦Intercept I/O              Standard, No Echo            ¦
+¦ ¦Native Executable          Yes                          ¦
+¦ ¦Use Shell to Execute       No                           ¦
+¦ ¦Modify User Data           No                           ¦
+¦ ¦Execute on Event           No                           ¦
+¦ ¦Pause After Execution      No                           ¦
+¦ ¦BBS Drop File Type         GAP             DOOR.SYS     ¦
+¦ ¦Place Drop File In         Node Directory               ¦
+¦ ¦Time Options...                                         ¦
++----------------------------------------------------------+
+</pre>
+<h4>Linux Version (After v0.24)</h4>
+<p>Versions after v0.24 support socket I/O, so while you can still use STDIO redirection, it's no longer required. To support socket I/O a DOOR32.SYS drop file is required however. Here's the settings I used in Synchronet:</p>
+<pre>+[·][?]----------------------------------------------------+
+¦                          Usurper                         ¦
++----------------------------------------------------------¦
+¦ ¦Name                       Usurper                      ¦
+¦ ¦Internal Code              USURPER                      ¦
+¦ ¦Start-up Directory         ../xtrn/usurper              ¦
+¦ ¦Command Line               USURPER /N%1 /P%n            ¦
+¦ ¦Clean-up Command Line                                   ¦
+¦ ¦Execution Cost             None                         ¦
+¦ ¦Access Requirements                                     ¦
+¦ ¦Execution Requirements                                  ¦
+¦ ¦Multiple Concurrent Users  Yes                          ¦
+¦ ¦Intercept I/O              No                           ¦
+¦ ¦Native Executable          Yes                          ¦
+¦ ¦Use Shell to Execute       No                           ¦
+¦ ¦Modify User Data           No                           ¦
+¦ ¦Execute on Event           No                           ¦
+¦ ¦Pause After Execution      No                           ¦
+¦ ¦BBS Drop File Type         Mystic          DOOR32.SYS   ¦
+¦ ¦Place Drop File In         Node Directory               ¦
+¦ ¦Time Options...                                         ¦
++----------------------------------------------------------+
+</pre>
