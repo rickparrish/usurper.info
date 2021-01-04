@@ -1,0 +1,22 @@
+<div class="container">
+	<br />
+	<div class="navbar navbar-inverse" id="NavBar">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">Usurper.info</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li {% if page.url == "/about.html" %}class="active"{% endif %}><a href="/about" title="About">About</a></li>
+				<li {% if page.url == "/news.html" %}class="active"{% endif %}><a href="/news" title="News">News</a></li>
+				<li {% if page.url == "/downloads.html" %}class="active"{% endif %}><a href="/downloads" title="Downloads">Downloads</a></li>
+				<li {% if page.url == "/installing.html" %}class="active"{% endif %}><a href="/installing" title="Installing">Installing</a></li>
+				<li {% if page.url == "/contact.html" %}class="active"{% endif %}><a href="/contact" title="Contact Us">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
